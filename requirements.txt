@@ -1,0 +1,24 @@
+# Temel Derin Öğrenme Kütüphanesi
+torch>=2.1.0
+
+# Hugging Face Ekosistemi
+transformers>=4.37.0
+datasets
+accelerate
+huggingface_hub
+
+# Fine-Tuning (İnce Ayar) ve Kuantizasyon
+# Not: Notebook'ta trl 0.8.6 sürümü özellikle belirtilmiş, uyum için sabitliyoruz.
+trl==0.8.6
+peft
+bitsandbytes
+
+# Veri İşleme ve Yardımcı Araçlar
+pandas
+numpy
+scipy
+protobuf
+sentencepiece
+
+# Loglama ve İzleme
+tensorboard

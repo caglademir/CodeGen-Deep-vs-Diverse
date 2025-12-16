@@ -1,0 +1,18 @@
+{
+  "model_name": "diverse_think_checkpoint-step-400-epoch-1.42",
+  "model_type": "diverse_think",
+  "checkpoint_path": "models/diverse_think/checkpoints/checkpoint-step-400-epoch-1.42",
+  "difficulty": "2408-2502_atcoder",
+  "num_problems": 41,
+  "timestamp": "2025-12-15T21:31:46.672337",
+  "stats": {
+    "total": 41,
+    "passed": 9,
+    "failed": 32,
+    "error": 0,
+    "no_tests": 0,
+    "pass_at_1": 0.21951219512195122
+  },
+  "pass_at_1": 0.21951219512195122,
+  "detailed_log": "results/livecodebench/detailed/diverse_think_checkpoint-step-400-epoch-1.42_2408-2502_atcoder.jsonl"
+}

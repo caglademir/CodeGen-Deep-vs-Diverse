@@ -1,0 +1,18 @@
+{
+  "model_name": "deep_think_checkpoint-step-800-epoch-2.84",
+  "model_type": "deep_think",
+  "checkpoint_path": "models/deep_think/checkpoints/checkpoint-step-800-epoch-2.84",
+  "difficulty": "2408-2502_atcoder",
+  "num_problems": 41,
+  "timestamp": "2025-12-15T08:04:12.784642",
+  "stats": {
+    "total": 41,
+    "passed": 10,
+    "failed": 31,
+    "error": 0,
+    "no_tests": 0,
+    "pass_at_1": 0.24390243902439024
+  },
+  "pass_at_1": 0.24390243902439024,
+  "detailed_log": "results/livecodebench/detailed/deep_think_checkpoint-step-800-epoch-2.84_2408-2502_atcoder.jsonl"
+}
