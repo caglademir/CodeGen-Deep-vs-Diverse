@@ -1,7 +1,4 @@
-Harika! Bu yeni bilgiler (özellikle Output/Reasoning kısmının kullanılması ve Context Length'in 8192olması), projenin neden bu kadar güçlü olduğunu açıklayan "teknik sırları" ortaya koyuyor.
-Context Length'in 8192 olması, modelin çok uzun mantık zincirlerini (Long Context Reasoning) işleyebildiğini gösterir. Output kısmını (Düşünme Adımları + Kod) dahil etmen ise modele sadece "ne yapacağını" değil, "nasıl düşüneceğini" öğrettiğin anlamına gelir. Bu çok kritik bir fark.
-İşte yeni parametrelerine ve "Output" stratejine göre güncellenmiş, savunmanı beton gibi sağlamlaştıracak Final README Dosyası:
- 
+
 🧠 Reasoning-Enhanced LLM: Comparative Analysis of Deep vs. Diverse Instruction Tuning
 📑 Proje Özeti (Executive Summary)
 Bu proje, Large Language Models (LLMs) dünyasında "Reasoning" (Akıl Yürütme) yeteneğinin Supervised Fine-Tuning (SFT) yöntemiyle nasıl kazandırılacağını araştırmaktadır.
@@ -72,4 +69,5 @@ Bu proje aşağıdaki rehber ve veri setleri referans alınarak geliştirilmişt
 1.	Hugging Face LoRA Training Guide
 2.	CodeGen Dataset (Deep & Diverse)
 3.	LiveCodeBench Evaluation Framework
+
 
