@@ -1,6 +1,3 @@
-
-
-```markdown
 # 🧠 CodeGen: Optimizing Small LLMs with Chain-of-Thought Strategies
 
 ![Project Status](https://img.shields.io/badge/Status-Completed-success)
@@ -49,6 +46,7 @@ Modeller **OpenAI HumanEval** ve **AtCoder** veri setleri üzerinde test edilmi�
 Eğitim sürecinde bellek verimliliği için **LoRA (Low-Rank Adaptation)** kullanılmıştır.
 * **Rank (r):** 32
 * **Alpha:** 64
+* **LR:** 5e-5
 * **Target Modules:** `q_proj`, `v_proj`, `gate_proj`, `up_proj`
 * **Batch Size:** 16
 * **Optimizer:** AdamW
@@ -57,62 +55,19 @@ Eğitim sürecinde bellek verimliliği için **LoRA (Low-Rank Adaptation)** kull
 * **Deep Dataset:** `Naholav/CodeGen-Deep-5K` (Adım adım mantıksal analiz içeren kod çözümleri).
 * **Diverse Dataset:** `Naholav/CodeGen-Diverse-5K` (Farklı algoritmik yaklaşımlar içeren çözümler).
 
+---
 
-
-## 🚀 Kurulum ve Kullanım
-
+🚀 Kurulum ve Kullanım
 Modeli yerel ortamınızda çalıştırmak için aşağıdaki adımları izleyebilirsiniz.
 
-### 1. Gereksinimler
+1. Gereksinimler
 
-```bash
+Bash
 pip install torch transformers peft datasets bitsandbytes accelerate
 
-```
+👥 İletişim ve Lisans
+Bu proje [Çağla DEMİR 2020556018] tarafından, LLM'lerin kodlama yeteneklerini araştırma projesi kapsamında geliştirilmiştir.
 
-### 2. Modelin Yüklenmesi (Inference)
+Lisans: MIT License
 
-Aşağıdaki Python kodu, eğitilmiş LoRA adaptörünü taban model ile birleştirerek çalıştırır:
-
-```python
-import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer
-from peft import PeftModel
-
-# 1. Taban Modeli Yükle
-base_model_id = "Qwen/Qwen2.5-Coder-1.5B-Instruct"
-model = AutoModelForCausalLM.from_pretrained(
-    base_model_id,
-    torch_dtype=torch.float16,
-    device_map="auto"
-)
-tokenizer = AutoTokenizer.from_pretrained(base_model_id)
-
-# 2. Deep Think Adaptörünü Yükle (Step 400)
-# 'path/to/deep-lora-adapter' kısmını indirdiğiniz klasör ile değiştirin
-model = PeftModel.from_pretrained(model, "path/to/deep-lora-adapter")
-
-# 3. Test Et
-prompt = "Write a Python function to find the nth Fibonacci number."
-inputs = tokenizer(prompt, return_tensors="pt").to("cuda")
-outputs = model.generate(**inputs, max_new_tokens=500)
-print(tokenizer.decode(outputs[0], skip_special_tokens=True))
-
-```
-
----
-
-## 👥 İletişim ve Lisans
-
-Bu proje **[Çağla Demir 2020556018]** tarafından, LLM'lerin kodlama yeteneklerini araştırma projesi kapsamında geliştirilmiştir.
-
-* **Lisans:** MIT License
-* **Base Model Lisansı:** Apache 2.0 (Qwen)
-
----
-
-*Generated for the CodeGen Final Report Submission.*
-
-```
-
-```
+Base Model Lisansı: Apache 2.0 (Qwen)
